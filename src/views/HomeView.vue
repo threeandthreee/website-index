@@ -9,7 +9,7 @@ v-container
       v-card-text
         .d-flex.flex-column
           div
-            a(href="https://vod-sync.onrender.com")
+            a(href="https://vod-sync.3and3.dev")
               strong Vod Sync
             span &nbsp;- Sync youtube or twitch vods to a reference point and playback in sync.
       v-card-actions
