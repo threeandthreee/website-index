@@ -15,12 +15,12 @@ export default {
 </script>
 
 <style lang="stylus">
+.title-holder
+  text-align: center
 .top-title
   font-weight: 900
   font-size: 3em
-  text-align: center
 .top-title-middle
-  text-align: center
   font-weight: 100
   font-size: 2em
   margin-top: -16px

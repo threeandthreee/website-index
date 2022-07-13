@@ -1,8 +1,10 @@
 <template lang="pug">
 v-container
-  .top-title WHAT I'VE DONE
-  .top-title-middle and
-  .top-title WHAT I'M DOING
+  div.mx-auto.title-holder
+    span.top-title 3
+    span.top-title-middle and
+    span.top-title 3
+    span.top-title-middle .dev
   .d-flex.flex-column.align-center.mx-auto(style="max-width:400px")
     v-card.ma-1(outlined)
       v-card-title Programming
@@ -17,9 +19,17 @@ v-container
         link-btn(url="https://codepen.io/alnordst" icon="codepen.svg" desc="Codepen")
     v-card.ma-1(outlined)
       v-card-title Art
-      v-card-text My earliest stuff is on <strong>DeviantArt</strong>. There was a middle period where I worked on comics for a now dead website, and posted my doodles on <strong>Tumblr</strong>. Getting something up to display my old comics and current doodles is on my to-do list.
+      v-card-text
+        .d-flex.flex-column
+          div
+            a(href="https://blog.3and3.dev")
+              strong Blog
+            span.ml-1 - Doodles mostly, but some other stuff could end up here too.
+          div
+            a(href="https://3and3.the-comic.org")
+              strong Comics
+            span.ml-1 - An archive of comics I did years ago, but who knows, maybe I'll get back to it.
       v-card-actions
-        link-btn(url="https://fishydrawings.tumblr.com" icon="tumblr.svg" desc="Tumblr")
         link-btn(url="https://www.deviantart.com/aglari" icon="deviantart.svg" desc="DeviantArt")
     v-card.ma-1(outlined)
       v-card-title Speedrunning
