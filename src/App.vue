@@ -25,4 +25,7 @@ export default {
   font-size: 2em
   margin-top: -16px
   margin-bottom: -16px
+.nowrap
+  overflow:hidden
+  white-space:nowrap
 </style>
