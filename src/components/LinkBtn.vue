@@ -1,8 +1,8 @@
 <template lang="pug">
 v-tooltip(bottom)
   template(v-slot:activator="{ on, attrs }")
-    v-btn.ma-0(icon :href="url" v-bind="attrs" v-on="on")
-      v-img(:src="require(`../assets/${icon}`)" contain height=20 width=20)
+    v-btn.my-0.mx-1(icon :href="url" v-bind="attrs" v-on="on")
+      v-img(:src="require(`../assets/${icon}`)" contain height=30 width=30)
   span {{desc}}
 </template>
 

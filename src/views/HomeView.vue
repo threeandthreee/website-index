@@ -7,7 +7,7 @@ v-container
     span.top-title-middle .dev
   .d-flex.flex-column.align-center.mx-auto(style="max-width:400px")
     v-card.ma-1(outlined)
-      v-card-title Programming
+      v-card-title Projects
       v-card-text
         .d-flex.flex-column
           div
@@ -24,17 +24,15 @@ v-container
           div
             a(href="https://blog.3and3.dev")
               strong Blog
-            span.ml-1 - Doodles mostly, but some other stuff could end up here too.
+            span.ml-1 - Doodles, mostly.
           div
             a(href="https://3and3.the-comic.org")
               strong Comics
             span.ml-1 - An archive of comics I did years ago, but who knows, maybe I'll get back to it.
-      v-card-actions
-        link-btn(url="https://www.deviantart.com/aglari" icon="deviantart.svg" desc="DeviantArt")
     v-card.ma-1(outlined)
       v-card-title Speedrunning
       v-card-text
-        span I hold the Road Runner world record in <strong>Desert Demolition featuring Road Runner and Wile E. Coyote</strong> and have monkeyed around with <strong>A Link to the Past</strong> a bit, but for the most part I just run a lot of <strong>Metroid Dread</strong>.
+        span I mostly just run a lot of <em>Metroid Dread</em>, though I'd like to get decent at <em>A Link to the Past</em> at some point. Oh, and not to brag, but I'm a world record holder in the ever popular speed game: <em>Desert Demolition featuring Road Runner and Wile E. Coyote</em>.
       v-card-actions
         link-btn(url="https://twitch.tv/threeandthree" icon="twitch.svg" desc="Twitch")
         link-btn(url="https://www.speedrun.com/user/threeandthree" icon="src.png" desc="Speedrun.com")
