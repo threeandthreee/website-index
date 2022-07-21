@@ -11,6 +11,10 @@ v-container
       v-card-text
         .d-flex.flex-column
           div
+            a(href="https://budget.3and3.dev")
+              strong Budget
+            span &nbsp;- I wanted to ditch my spreadsheet for a budget app, but none of them were quite what I was looking for, so I made one.
+          div
             a(href="https://vod-sync.3and3.dev")
               strong Vod Sync
             span &nbsp;- Sync youtube or twitch vods to a reference point and playback in sync.
