@@ -41,7 +41,7 @@ export default {
             let val = item.run.values[it.id]
             return it.values.values[val].label
           })
-          let time = item.run.times.primary.slice(2, -1).replace(/[HM]/g, ':')
+          let time = item.run.times.primary.slice(2).toLowerCase().replace('h', 'h ').replace('m', 'm ')
           return `${category.name} ${subCategories.join(', ')} - ${time} (${ordinal(item.place)})`.replace(/\s+/g, ' ')
         }))
         return [game.names.international, times]

@@ -32,7 +32,7 @@ v-container
                   tumblr-preview(height="100%")
                 .overline.text-center.mx-auto.py-auto Sketches
             v-col(cols=6)
-              v-card(href="https://3and3.the-comic.org" hover height="150px" outlined)
+              v-card(href="https://comics.3and3.dev" hover height="150px" outlined)
                 div(style="height:120px")
                   comic-preview(width="100%" height="100%")
                 .overline.text-center.mx-auto.py-auto Comics
