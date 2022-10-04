@@ -40,7 +40,7 @@ v-container
       v-card-title Speedrunning
       v-card-text
         .d-flex.flex-column
-          span I mostly just run a lot of <em>Metroid Dread</em>, though I'd like to get decent at <em>A Link to the Past</em> at some point. Oh, and not to brag, but I'm a world record holder in the ever popular speed game: <em>Desert Demolition featuring Road Runner and Wile E. Coyote</em>.
+          span I've spent the most time running <em>Metroid Dread</em> by far but I've dipped my toes in a few other games. A playlist of my personal bests can be found <a href="https://www.twitch.tv/collections/RybJ6A510hYEww">in this twitch collection</a>.
           v-divider.my-2.d-none
           v-card.mt-3.mb-n3.py-2.pl-2(outlined)
             personal-bests

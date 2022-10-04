@@ -1,9 +1,9 @@
 <template lang="pug">
-div
-  .subtitle-2 Personal Bests
-  .d-flex.flex-column(v-for="(runs, game) of processed")
-    .overline.nowrap {{game}}
-    .caption.ml-2(v-for="run of runs") &bull; {{run}}
+div.personal-bests
+  .subtitle-2.top-title Personal Bests
+  .d-flex.flex-column.game(v-for="([game, runs]) of processed")
+    .overline.nowrap.title {{game}}
+    .caption.entry(v-for="run of runs") &bull; {{run}}
 </template>
 
 <script>
@@ -22,14 +22,14 @@ export default {
       let personalBestsResponse = await axios.get(`${api}/users/${user}/personal-bests`)
       let personalBests = personalBestsResponse.data.data
       let gameGrouped = personalBests.reduce((acc, item) => {
-        if(item.run.game in acc) {
-          acc[item.run.game].push(item)
-        } else {
-          acc[item.run.game] = [item]
-        }
+        let entry = acc.find(it => it[0] == item.run.game)
+        if(entry)
+          entry[1].push(item)
+        else
+          acc.push([item.run.game, [item]])
         return acc
-      }, {})
-      let processed = Object.fromEntries(await Promise.all(Object.entries(gameGrouped).map(async ([gameId, items]) => {
+      }, [])
+      let processed = await Promise.all(gameGrouped.map(async ([gameId, items]) => {
         let gameResponse = await axios.get(`${api}/games/${gameId}`)
         let game = gameResponse.data.data
         let times = await Promise.all(items.map(async item => {
@@ -42,10 +42,10 @@ export default {
             return it.values.values[val].label
           })
           let time = item.run.times.primary.slice(2).toLowerCase().replace('h', 'h ').replace('m', 'm ')
-          return `${category.name} ${subCategories.join(', ')} - ${time} (${ordinal(item.place)})`.replace(/\s+/g, ' ')
+          return `${category.name} ${subCategories.join(', ')}: ${time} (${ordinal(item.place)})`.replace(/\s+/g, ' ')
         }))
         return [game.names.international, times]
-      })))
+      }))
       this.processed = processed
     } catch {
       // do nothing
@@ -53,3 +53,23 @@ export default {
   }
 }
 </script>
+
+<style lang="stylus">
+.personal-bests
+  .top-title
+    margin-top: -4px
+    margin-bottom: -8px
+  .game
+    margin-top: 20px
+    margin-bottom: 4px
+    border-left: 1px solid #ccc
+    padding: 0 0 0 8px
+    .title
+      margin-top: -12px
+      margin-bottom: -12px
+    .entry
+      margin-top: 4px
+      margin-bottom: -4px
+      margin-left: 12px
+      text-indent: -8px
+</style>
