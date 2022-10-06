@@ -48,6 +48,12 @@ v-container
         link-btn(url="https://twitch.tv/threeandthree" icon="twitch.svg" desc="Twitch")
         link-btn(url="https://www.speedrun.com/user/threeandthree" icon="src.png" desc="Speedrun.com")
         link-btn(url="https://racetime.gg/user/DMLq1oZAge3OeQG8" icon="racetime.svg" desc="Racetime.gg")
+    .d-flex.justify-content-center.mt-4
+      v-icon mdi-email
+      .body-1.mr-2 :
+      .body-1 alex
+      v-icon mdi-at
+      .body-1 3and3.dev
 </template>
 
 <script>
