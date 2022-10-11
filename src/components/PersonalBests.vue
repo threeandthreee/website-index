@@ -3,7 +3,12 @@ div.personal-bests
   .subtitle-2.top-title Personal Bests
   .d-flex.flex-column.game(v-for="([game, runs]) of processed")
     .overline.nowrap.title {{game}}
-    .caption.entry(v-for="run of runs") &bull; {{run}}
+    .caption.entry(v-for="run of runs")
+      strong &bull;
+      span {{run.catName}}
+      em {{run.subCats}}:
+      a(:href="run.link") {{run.time}}
+      span ({{run.ord}})
 </template>
 
 <script>
@@ -32,7 +37,7 @@ export default {
       let processed = await Promise.all(gameGrouped.map(async ([gameId, items]) => {
         let gameResponse = await axios.get(`${api}/games/${gameId}`)
         let game = gameResponse.data.data
-        let times = await Promise.all(items.map(async item => {
+        let datasets = await Promise.all(items.map(async item => {
           let categoryResponse = await axios.get(`${api}/categories/${item.run.category}`)
           let category = categoryResponse.data.data
           let variablesResponse = await axios.get(`${api}/categories/${item.run.category}/variables`)
@@ -42,9 +47,15 @@ export default {
             return it.values.values[val].label
           })
           let time = item.run.times.primary.slice(2).toLowerCase().replace('h', 'h ').replace('m', 'm ')
-          return `${category.name} ${subCategories.join(', ')}: ${time} (${ordinal(item.place)})`.replace(/\s+/g, ' ')
+          return {
+            catName: category.name,
+            subCats: subCategories.join(', '),
+            time: time,
+            ord: ordinal(item.place),
+            link: item.run.videos.links[0].uri
+          }
         }))
-        return [game.names.international, times]
+        return [game.names.international, datasets]
       }))
       this.processed = processed
     } catch {
@@ -72,4 +83,6 @@ export default {
       margin-bottom: -4px
       margin-left: 12px
       text-indent: -8px
+      *
+        margin-right: 4px
 </style>
