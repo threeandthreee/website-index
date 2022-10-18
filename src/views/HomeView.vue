@@ -17,7 +17,7 @@ v-container
           div
             a(href="https://vod-sync.3and3.dev")
               strong Vod Sync
-            span &nbsp;- Sync youtube or twitch vods to a reference point and playback in sync. Designed with speedrunning in mind -- it's good for comparing full runs, comparing segments, and race playback. I may think of some other ideas with this in the future, but I feel ok calling this one done.
+            span &nbsp;- Sync youtube or twitch vods to a reference point and playback with shared controls. Designed with speedrunning in mind -- it's good for comparing full runs, comparing segments, and race playback. I may think of some other ideas with this in the future, but I feel ok calling this one done.
       v-card-actions
         link-btn(url="https://github.com/alnordst" icon="github.svg" desc="Github")
         link-btn(url="https://codepen.io/alnordst" icon="codepen.svg" desc="Codepen")
