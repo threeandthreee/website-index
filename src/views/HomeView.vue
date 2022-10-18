@@ -40,7 +40,7 @@ v-container
       v-card-title Speedrunning
       v-card-text
         .d-flex.flex-column
-          span I've spent the most time running <em>Metroid Dread</em> by far but I've dipped my toes in a few other games. I stream my run and practice on twitch after the kids are asleep. I also do races from time to time.
+          span I've spent the most time running <em>Metroid Dread</em> by far but I've dipped my toes in a few other games. I stream my runs on <a href="https://twitch.tv/threeandthree">twitch</a> after the kids are asleep. I also participate in <a href="https://racing.3and3.dev">4-way Metroid Dread races</a> every other week.
           v-divider.my-2.d-none
           v-card.mt-3.mb-n3.py-2.pl-2(outlined)
             personal-bests
