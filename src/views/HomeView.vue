@@ -11,13 +11,17 @@ v-container
       v-card-text
         .d-flex.flex-column
           div.mb-4
+            a(href="https://psalms.3and3.dev")
+              strong Weekly Psalms
+            span &nbsp;- At the start of the year I decided I wanted to go through the Psalms at a pace of 3 per week, but I was having a little trouble keeping track.
+          div.mb-4
             a(href="https://budget.3and3.dev")
               strong Budget
             span &nbsp;- I wanted to ditch my spreadsheet for a budget app, but none of them were quite what I was looking for, so I made one. Very much a work in progress at this point.
           div
             a(href="https://vod-sync.3and3.dev")
               strong Vod Sync
-            span &nbsp;- Sync youtube or twitch vods to a reference point and playback with shared controls. Designed with speedrunning in mind -- it's good for comparing full runs, comparing segments, and race playback. I may think of some other ideas with this in the future, but I feel ok calling this one done.
+            span &nbsp;- Sync YouTube or Twitch vods to a reference point and playback with shared controls. Designed with speedrunning in mind -- it's good for comparing full runs, comparing segments, and race playback. I may think of some other ideas with this in the future, but I feel ok calling this one done.
       v-card-actions
         link-btn(url="https://github.com/alnordst" icon="github.svg" desc="Github")
         link-btn(url="https://codepen.io/alnordst" icon="codepen.svg" desc="Codepen")
@@ -40,7 +44,7 @@ v-container
       v-card-title Speedrunning
       v-card-text
         .d-flex.flex-column
-          span I've spent the most time running <em>Metroid Dread</em> by far but I've dipped my toes in a few other games. I stream my runs on <a href="https://twitch.tv/threeandthree">twitch</a> after the kids are asleep. I also participate in <a href="https://racing.3and3.dev">4-way Metroid Dread races</a> every other week.
+          span I stream my runs on <a href="https://twitch.tv/threeandthree">twitch</a> after the kids are asleep. I also participate in <a href="https://raceswild.3and3.dev">speedrun races</a> every other week with some friends.
           v-divider.my-2.d-none
           v-card.mt-3.mb-n3.py-2.pl-2(outlined)
             personal-bests
