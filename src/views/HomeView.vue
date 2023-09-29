@@ -11,6 +11,10 @@ v-container
       v-card-text
         .d-flex.flex-column
           div.mb-4
+            a(href="https://github.com/threeandthreee/gamepadviewer-skins")
+              strong Minimalist Skins for Gamepad Viewer
+            span &nbsp;- Couldn't find any minimalist skins, so I made them myself.
+          div.mb-4
             a(href="https://psalms.3and3.dev")
               strong Weekly Psalms
             span &nbsp;- At the start of the year I decided I wanted to go through the Psalms at a pace of 3 per week, but I was having a little trouble keeping track.
@@ -23,7 +27,7 @@ v-container
               strong Vod Sync
             span &nbsp;- Sync YouTube or Twitch vods to a reference point and playback with shared controls. Designed with speedrunning in mind -- it's good for comparing full runs, comparing segments, and race playback. I may think of some other ideas with this in the future, but I feel ok calling this one done.
       v-card-actions
-        link-btn(url="https://github.com/alnordst" icon="github.svg" desc="Github")
+        link-btn(url="https://github.com/threeandthreee" icon="github.svg" desc="Github")
         link-btn(url="https://codepen.io/alnordst" icon="codepen.svg" desc="Codepen")
     v-card.my-2(outlined :width="width")
       v-card-title Art
