@@ -11,6 +11,10 @@ v-container
       v-card-text
         .d-flex.flex-column
           div.mb-4
+            a(href="https://raceswild.3and3.dev")
+              strong Races Wild
+            span &nbsp;- Organizing and restreaming biweekly races.
+          div.mb-4
             a(href="https://github.com/threeandthreee/gamepadviewer-skins")
               strong Minimalist Skins for Gamepad Viewer
             span &nbsp;- Couldn't find any minimalist skins, so I made them myself.
