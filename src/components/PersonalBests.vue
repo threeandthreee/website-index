@@ -55,7 +55,12 @@ export default {
             link: item.run.videos.links[0].uri
           }
         }))
-        return [game.names.international, datasets]
+        let trimmed = []
+        datasets.forEach(item => {
+          if(!trimmed.some(it => it.catName == item.catName && it.subCats == item.subCats))
+            trimmed.push(item)
+        })
+        return [game.names.international, trimmed]
       }))
       this.processed = processed
     } catch {

@@ -15,21 +15,17 @@ v-container
               strong Races Wild
             span &nbsp;- Organizing and restreaming biweekly races.
           div.mb-4
-            a(href="https://github.com/threeandthreee/gamepadviewer-skins")
-              strong Minimalist Skins for Gamepad Viewer
-            span &nbsp;- Couldn't find any minimalist skins, so I made them myself.
+            a(href="https://github.com/threeandthreee/Archipelago/releases")
+              strong AP LADX
+            span &nbsp;- I'm currently the maintainer of Link's Awakening: DX for the <a href="https://archipelago.gg">Archipelago</a> multi-game multi-world randomizer.
           div.mb-4
-            a(href="https://psalms.3and3.dev")
-              strong Weekly Psalms
-            span &nbsp;- At the start of the year I decided I wanted to go through the Psalms at a pace of 3 per week, but I was having a little trouble keeping track.
-          div.mb-4
-            a(href="https://budget.3and3.dev")
-              strong Budget
-            span &nbsp;- I wanted to ditch my spreadsheet for a budget app, but none of them were quite what I was looking for, so I made one. Very much a work in progress at this point.
-          div
             a(href="https://vod-sync.3and3.dev")
               strong Vod Sync
             span &nbsp;- Sync YouTube or Twitch vods to a reference point and playback with shared controls. Designed with speedrunning in mind -- it's good for comparing full runs, comparing segments, and race playback. I may think of some other ideas with this in the future, but I feel ok calling this one done.
+          div
+            a(href="https://games.3and3.dev")
+              strong Games
+            span &nbsp;- Well, game. But I made an index so here it is.
       v-card-actions
         link-btn(url="https://github.com/threeandthreee" icon="github.svg" desc="Github")
         link-btn(url="https://codepen.io/alnordst" icon="codepen.svg" desc="Codepen")
@@ -52,12 +48,13 @@ v-container
       v-card-title Speedrunning
       v-card-text
         .d-flex.flex-column
-          span I stream my runs on <a href="https://twitch.tv/threeandthree">twitch</a> after the kids are asleep. I also participate in <a href="https://raceswild.3and3.dev">speedrun races</a> every other week with some friends.
+          span I stream my runs on <a href="https://twitch.tv/threeandthree">twitch</a> after the kids are asleep. Vods are on <a href="https://www.youtube.com/playlist?list=PL_TLWBSKyqgP1Jo1fjYeq7Atwhdem3IdH">youtube</a>. I also participate in <a href="https://raceswild.3and3.dev">speedrun races</a> every other week with some friends.
           v-divider.my-2.d-none
           v-card.mt-3.mb-n3.py-2.pl-2(outlined)
             personal-bests
       v-card-actions
         link-btn(url="https://twitch.tv/threeandthree" icon="twitch.svg" desc="Twitch")
+        link-btn(url="https://youtube.com/@threeandthree" icon="youtube.svg" desc="Youtube")
         link-btn(url="https://www.speedrun.com/user/threeandthree" icon="src.png" desc="Speedrun.com")
         link-btn(url="https://racetime.gg/user/DMLq1oZAge3OeQG8" icon="racetime.svg" desc="Racetime.gg")
     .d-flex.justify-content-center.mt-4
